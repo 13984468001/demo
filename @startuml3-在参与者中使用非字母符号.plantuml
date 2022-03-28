@@ -1,0 +1,10 @@
+@startuml 在参与者中使用非字母符号
+'让响应信息显示在箭头下面'
+skinparam responseMessageBelowArrow true
+Alice -> "Bob()" : Hello
+"Bob()" -> "This is very\nlong" as Long
+' You can also declare:
+' "Bob()" -> Long as "This is very\nlong"
+Long --> "Bob()" : ok
+"Bob()" --> Alice : ok
+@enduml
